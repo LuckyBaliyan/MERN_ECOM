@@ -219,11 +219,11 @@ Open a Pull Request
 📜 License
 Licensed under the MIT License – see the LICENSE file for details.
 
-## 📬 Contact  
+📬 Contact  
 **Author:** Lucky Baliyan  
-- **GitHub:** [github.com/LuckyBaliayn](https://github.com/LuckyBaliyan)  
-- **LinkedIn:** [linkedin.com/in/lucky-baliyan-67b487299/](https://linkedin.com/in/lucky-baliyan-67b487299/)  
-- **Email:** [baliyanlucky85@.com](mailto:baliyanlucky85@gmail.com)  
+- **GitHub:** [](https://github.com/LuckyBaliyan)  
+- **LinkedIn:** [](https://linkedin.com/in/lucky-baliyan-67b487299/)  
+- **Email:** [](mailto:baliyanlucky85@gmail.com)  
 
 
 ---
