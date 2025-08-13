@@ -221,9 +221,9 @@ Licensed under the MIT License – see the LICENSE file for details.
 
 ## 📬 Contact  
 **Author:** Lucky Baliyan  
-- **GitHub:** [github.com/your-username](https://github.com/LuckyBaliyan)  
-- **LinkedIn:** [linkedin.com/in/your-link](https://linkedin.com/in/lucky-baliyan-67b487299/)  
-- **Email:** [your-email@example.com](mailto:baliyanlucky85@gmail.com)  
+- **GitHub:** [github.com/LuckyBaliayn](https://github.com/LuckyBaliyan)  
+- **LinkedIn:** [linkedin.com/in/lucky-baliyan-67b487299/](https://linkedin.com/in/lucky-baliyan-67b487299/)  
+- **Email:** [baliyanlucky85@.com](mailto:baliyanlucky85@gmail.com)  
 
 
 ---
