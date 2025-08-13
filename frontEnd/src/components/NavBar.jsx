@@ -6,9 +6,13 @@ import { toast } from 'react-toastify';
 
 const NavBar = () => {
     const [visible,setVisible] = useState(false);
+    const [block,setBlock] = useState(false);
     const { setShowSearch, getCartCount,cartItems,navigate,token,setToken,setCartItems } = useContext(ShopContext);
 
     const logout = ()=>{
+      if(!token){
+        return null;
+      }
         toast.success("Logged Out")
         navigate('/login');
         localStorage.removeItem('token');
@@ -39,15 +43,15 @@ const NavBar = () => {
         </ul>
 
         <div className='flex items-center gap-6'>
-            <Link to='/collection'><img src={assets.search_icon} className='w-5 cursor-pointer' alt="" onClick={()=>setShowSearch(true)}/></Link>
+            <p onClick={()=>navigate('/orders')} className='cursor-pointer hover:text-black scale-50 sm:scale-100'>Orders</p>
+            <p className={` ${!token?'hidden':''}cursor-pointer scale-50 sm:scale-100 bg-black text-white px-3 py-2 rounded text-sm hover:bg-gray-800`} onClick={logout}>Logout</p>
+            <Link to='/collection'><img src={assets.search_icon} className='w-5 scale-150 sm:scale-100 cursor-pointer' alt="" onClick={()=>setShowSearch(true)}/></Link>
             <div className='group relative'>
-                <img onClick={()=> token ? null:navigate('/login')} src={assets.profile_icon} className='w-5 cursor-pointer' alt="" />
+                <img onClick={()=> token ? null:navigate('/login')} src={assets.profile_icon} className='w-5 scale-150 sm:scale-100 cursor-pointer' alt="" />
                 {token && 
-                  <div className='group-active:block hidden absolute dropdown-menu right-0 pt-4 h-max'>
+                  <div className={`hidden absolute dropdown-menu right-0 pt-4 h-max`}>
                     <div className="flex flex-col gap-2 py-3 px-5 w-36 bg-slate-100 text-gray-500 rounded">
                         <p className='cursor-pointer hover:text-black'>My Profile</p>
-                        <p onClick={()=>navigate('/orders')} className='cursor-pointer hover:text-black'>Orders</p>
-                        <p className='cursor-pointer hover:text-black' onClick={logout}>Logout</p>
                     </div>
                 </div>
                 }
