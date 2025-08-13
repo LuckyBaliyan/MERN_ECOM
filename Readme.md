@@ -1,230 +1,359 @@
-# MERN E-Commerce Website  
+🛍 MERN E-Commerce Website
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A full-stack **MERN (MongoDB, Express.js, React, Node.js)** based e-commerce platform featuring a modern, responsive UI, secure authentication, product management, shopping cart, and integrated payment gateway.  
-The project includes a dedicated **admin panel** for product, order, and user management, making it suitable for both learning purposes and real-world deployment.  
+A fully functional MERN stack e-commerce platform with a modern user interface, smooth scrolling animations, secure payment integration, and an admin panel for product management.
 
----
+## 🚀 Features  
 
-## 🛠 Tech Stack  
+### **User Side**  
+- 🏠 **Browse Products** – Modern, responsive, and user-friendly interface  
+- 🛒 **Cart Management** – Add, update, and remove items from the cart  
+- 💳 **Multiple Payment Options** – Secure online payments (Stripe) & Cash on Delivery (COD)  
+- 📱 **Responsive Design** – Optimized for mobile, tablet, and desktop  
+- 🎯 **Smooth Animations** – Enhanced scrolling experience using **Lenis**  
 
-**Frontend:**  
-- React.js  
-- TailwindCSS  
-- React Router DOM  
-- Axios  
-- React Toastify (notifications)  
-- Lenis (smooth scrolling)  
+### **Admin Side**  
+- 📦 **Product Management** – Add, edit, and delete products easily  
+- 📊 **Order Management** – View, process, and update order statuses  
+- 🔑 **Secure Authentication** – Admin-only access to the dashboard  
 
-**Backend:**  
-- Node.js  
-- Express.js  
-- Mongoose  
-- Multer (file uploads)  
-- cors  
-- body-parser  
+## Tech Stack
 
-**Database:**  
-- MongoDB Atlas  
-
-**Other Tools & Services:**  
-- Stripe (payment gateway)  
-- JSON Web Token (JWT) for authentication  
-- bcrypt.js (password hashing)  
-- Cloudinary (image storage)  
-- dotenv (environment variables)  
-- nodemon (development)  
-
----
-
-## ✨ Features  
-
-### **Frontend (User Side)**  
-- 🛍 **Product Browsing** – View products with images, descriptions, and prices.  
-- 🔍 **Search & Filters** – Search products by name and filter by category.  
-- 🛒 **Shopping Cart** – Add, update, and remove products from the cart.  
-- 💳 **Checkout Process** – Seamless checkout with integrated Stripe payment gateway.  
-- 📱 **Responsive Design** – Optimized for desktop, tablet, and mobile devices.  
-- 🔔 **Real-time Notifications** – Toastify notifications for user actions.  
-- 🎯 **Smooth Scrolling** – Implemented with Lenis for enhanced user experience.  
+### **Frontend**  
+- **React.js** – Component-based UI development  
+- **Tailwind CSS** – Utility-first CSS framework for styling  
+- **Axios** – For API calls and data fetching  
+- **Lenis** – Smooth scrolling animations  
 
 ### **Backend**  
-- ⚡ **RESTful API** – Fully structured APIs for products, orders, and users.  
-- 🔐 **Authentication & Authorization** – Secure login/signup with JWT-based auth.  
-- 🔏 **Password Security** – Hashed passwords using bcrypt.  
-- 🗂 **Image Uploads** – Product images uploaded via Multer and stored in Cloudinary.  
-- 📦 **Order Management** – Backend support for order creation, updates, and tracking.  
+- **Node.js** – JavaScript runtime environment  
+- **Express.js** – Web application framework for Node.js  
+- **MongoDB** – NoSQL database for storing application data  
+- **Mongoose** – ODM for MongoDB  
+- **Stripe API** – Secure payment gateway integration  
+- **Multer** – Middleware for handling file uploads
 
-### **Admin Panel**  
-- 📦 **Product Management** – Create, update, and delete products with image upload.  
-- 📊 **Order Tracking** – View and update order statuses.  
-- 👥 **User Management** – Manage registered customers.  
-- 📈 **Dashboard Overview** – Summary of sales, orders, and products.  
 
----
+## 📂 Project Structure  
 
-## 🚀 Installation & Setup  
+mern-ecommerce/  
+│
+├── 📁 admin/   
+│ ├── 📁 public/   
+│ ├── 📁 src/   
+│ │ ├── 📁 assets/   
+│ │ ├── 📁 components/   
+│ │ ├── 📁 pages/   
+│ │ ├── 📄 App.jsx  
+│ │ ├── 📄 index.js   
+│ │ └── 📄 index.css   
+│ ├── 📄 package.json  
+│ ├── 📄 tailwind.config.js  
+│ ├── 📄 postcss.config.js  
+│ └── 📄 vite.config.js   
+│
+├── 📁 backend/  
+│ ├── 📁 config/  
+│ ├── 📁 controllers/   
+│ ├── 📁 middlewares/   
+│ ├── 📁 models/   
+│ ├── 📁 routes/  
+│ ├── 📁 utils/   
+│ ├── 📄 server.js   
+│ ├── 📄 .env   
+│ └── 📄 package.json   
+│
+├── 📁 frontend/   
+│ ├── 📁 public/  
+│ ├── 📁 src/  
+│ │ ├── 📁 assets/  
+│ │ ├── 📁 components/   
+│ │ ├── 📁 pages/   
+│ │ ├── 📁 context/   
+│ │ ├── 📄 App.jsx   
+│ │ ├── 📄 index.js   
+│ │ └── 📄 index.css   
+│ ├── 📄 package.json   
+│ ├── 📄 tailwind.config.js    
+│ ├── 📄 postcss.config.js   
+│ └── 📄 vite.config.js   
+│
+├── 📄 .gitignore  
+├── 📄 package.json  
+├── 📄 README.md  
+└── 📄 LICENSE 
 
-### **1. Clone the repository**  
+
+## Installation
+
+Install my-project with npm
+
 ```bash
-git clone https://github.com/your-username/mern-ecommerce.git
+  npm install my-project
+  cd my-project
+```
+    ## ⚙️ Installation & Setup
+
+Follow these steps to run the project locally:
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/LuckyBaliyan/mern-ecommerce.git
 cd mern-ecommerce
 
-2. Install dependencies
+2️⃣ Install Dependencies
 Backend
+
 bash
 Copy
 Edit
 cd backend
 npm install
 Frontend
+
 bash
 Copy
 Edit
 cd ../frontend
 npm install
+Admin Panel
 
-3. Create Environment Variables
-Backend .env
+bash
+Copy
+Edit
+cd ../admin
+npm install
+
+3️⃣ Set Up Environment Variables
+Create a .env file inside the backend folder and add the following:
+
 env
 Copy
 Edit
 PORT=5000
-MONGO_URI=your_mongodb_atlas_connection_string
+MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 STRIPE_SECRET_KEY=your_stripe_secret_key
 CLOUDINARY_CLOUD_NAME=your_cloudinary_name
 CLOUDINARY_API_KEY=your_cloudinary_api_key
 CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-Frontend .env
-env
-Copy
-Edit
-REACT_APP_API_URL=http://localhost:portNumber
 
-4. Run the development servers
+4️⃣ Run the Development Servers
 Backend
+
 bash
-Copy
-Edit
 cd backend
 npm run dev
 Frontend
+
+bash
+cd ../frontend
+npm run dev
+Admin Panel
+
 bash
 Copy
 Edit
-cd ../frontend
-npm start
+cd ../admin
+npm run dev
 
-5. Access the Application
-Frontend: http://localhost:3000
+5️⃣ Open in Browser
 
+Frontend (User Site): http://localhost:5173
+Admin Panel: http://localhost:5174
 Backend API: http://localhost:5000
 
-🌍 Production Deployment
-Backend Deployment (Render, Railway, Heroku)
-Push your backend code to GitHub.
 
-Connect your GitHub repo to your chosen hosting service.
+## API Reference
 
-Add all .env variables in the hosting environment settings.
+#### Get all items
 
-Frontend Deployment (Netlify, Vercel)
-Push your frontend code to GitHub.
+```http
+  GET /api/items
+```
 
-Connect your GitHub repo to Netlify/Vercel.
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
 
-Add REACT_APP_API_URL pointing to your backend's deployed URL.
+#### Get item
 
-📂 Folder Structure
-pgsql
-Copy
-Edit
-mern-ecommerce/
-│
-├── admin/                  # Admin panel (React)
-│   ├── public/              
-│   ├── src/
-│   │   ├── components/      
-│   │   ├── pages/           
-│   │   ├── utils/           
-│   │   ├── App.js
-│   │   └── index.js
-│   └── package.json
-│
-├── backend/                 
-│   ├── config/              
-│   ├── controllers/         
-│   ├── middleware/          
-│   ├── models/              
-│   ├── routes/              
-│   ├── uploads/             
-│   ├── server.js            
-│   └── package.json
-│
-├── frontend/                
-│   ├── public/              
-│   ├── src/
-│   │   ├── assets/          
-│   │   ├── components/      
-│   │   ├── context/         
-│   │   ├── pages/           
-│   │   ├── App.js
-│   │   └── index.js
-│   └── package.json
-│
-├── screenshots/             
-├── README.md
-└── package.json  
+```http
+  GET /api/items/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
+#### add(num1, num2)
+
+Takes two numbers and returns the sum.
 
 
-📡 API Documentation
-Auth Routes
-Method	Endpoint	Description
-POST	/auth/register	Register a new user
-POST	/auth/login	Authenticate user & return token
-GET	/auth/user	Get logged-in user details
+## 📡 API Documentation
 
-Product Routes
-Method	Endpoint	Description
-GET	/products	Get all products
-GET	/products/:id	Get single product details
-POST	/products	Create new product (Admin only)
-PUT	/products/:id	Update product (Admin only)
-DELETE	/products/:id	Delete product (Admin only)
+The backend provides RESTful APIs for managing products, users, orders, and payments.
 
-Order Routes
-Method	Endpoint	Description
-POST	/orders	Create a new order
-GET	/orders/my-orders	Get logged-in user's orders
-GET	/orders	Get all orders (Admin only)
-PUT	/orders/:id	Update order status (Admin)
-
-File Upload
-Method	Endpoint	Description
-POST	/upload	Upload image using Multer & Cloudinary
-
-
-🤝 Contributing
-Fork the repository
-
-Create a new branch (git checkout -b feature-name)
-
-Commit your changes (git commit -m "Add feature")
-
-Push to the branch (git push origin feature-name)
-
-Open a Pull Request
-
-
-📜 License
-Licensed under the MIT License – see the LICENSE file for details.
-
-📬 Contact  
-**Author:** Lucky Baliyan  
-- **GitHub:** [](https://github.com/LuckyBaliyan)  
-- **LinkedIn:** [](https://linkedin.com/in/lucky-baliyan-67b487299/)  
-- **Email:** [](mailto:baliyanlucky85@gmail.com)  
+### 🔹 Base URL 
+http://localhost:5000/api
 
 
 ---
+
+### 🛍 Product Routes
+| Method | Endpoint            | Description                  | Auth Required |
+|--------|--------------------|------------------------------|--------------|
+| GET    | `/products`        | Get all products             | ❌ No         |
+| GET    | `/products/:id`    | Get single product by ID     | ❌ No         |
+| POST   | `/products`        | Create a new product         | ✅ Admin      |
+| PUT    | `/products/:id`    | Update a product by ID       | ✅ Admin      |
+| DELETE | `/products/:id`    | Delete a product by ID       | ✅ Admin      |
+
+---
+
+### 👤 User Routes
+| Method | Endpoint           | Description                  | Auth Required |
+|--------|-------------------|------------------------------|--------------|
+| POST   | `/users/register` | Register a new user          | ❌ No         |
+| POST   | `/users/login`    | Login user                   | ❌ No         |
+| GET    | `/users/profile`  | Get logged-in user profile   | ✅ Yes        |
+| PUT    | `/users/profile`  | Update user profile          | ✅ Yes        |
+
+---
+
+### 📦 Order Routes
+| Method | Endpoint           | Description                  | Auth Required |
+|--------|-------------------|------------------------------|--------------|
+| POST   | `/orders`         | Create a new order           | ✅ Yes        |
+| GET    | `/orders/:id`     | Get order by ID              | ✅ Yes        |
+| GET    | `/orders`         | Get all orders (Admin)       | ✅ Admin      |
+| PUT    | `/orders/:id/pay` | Mark order as paid           | ✅ Yes        |
+| PUT    | `/orders/:id/deliver` | Mark order as delivered  | ✅ Admin      |
+
+---
+
+### 💳 Payment Routes
+| Method | Endpoint           | Description                  | Auth Required |
+|--------|-------------------|------------------------------|--------------|
+| POST   | `/payments/stripe`| Process Stripe payment       | ✅ Yes        |
+
+---
+
+### 🔐 Authentication
+- Protected routes require a **Bearer Token** in the `Authorization` header:
+
+
+---
+
+### 📌 Example Request (Create Product)
+```bash
+POST /api/products
+Content-Type: application/json
+Authorization: Bearer <admin_jwt_token>
+
+{
+  "name": "New Product",
+  "price": 1999,
+  "description": "A great product",
+  "category": "Electronics",
+  "countInStock": 10,
+  "image": "https://example.com/image.jpg"
+}
+
+Response:
+
+{
+  "message": "Product created successfully",
+  "product": {
+    "_id": "64b1a5c2f21c9f0d88a7f123",
+    "name": "New Product",
+    "price": 1999,
+    "description": "A great product",
+    "category": "Electronics",
+    "countInStock": 10,
+    "image": "https://example.com/image.jpg"}
+}
+
+
+## Contributing
+
+Contributions are always welcome!
+
+See `contributing.md` for ways to get started.
+
+Please adhere to this project's `code of conduct`.
+
+
+## 🤝 Contributing
+
+We welcome contributions to improve this project!  
+Follow these steps to contribute:
+
+### 1️⃣ Fork the Repository
+Click the **Fork** button at the top right of this repository page to create your own copy.
+
+### 2️⃣ Clone Your Fork
+```bash
+git clone https://github.com/<your-username>/mern-ecommerce.git
+cd mern-ecommerce
+
+3️⃣ Create a New Branch
+git checkout -b feature/your-feature-name
+
+
+4️⃣ Make Your Changes
+Follow the project’s code style and folder structure.
+Write clear and concise commit messages.
+
+5️⃣ Commit Your Changes
+git add .
+git commit -m "Add: your descriptive commit message"
+
+6️⃣ Push to Your Branch
+git push origin feature/your-feature-name
+
+7️⃣ Open a Pull Request
+Go to your fork on GitHub.
+
+Click "Compare & pull request".
+Provide a detailed description of your changes.
+
+📌 Contribution Guidelines
+
+Keep code clean and readable.
+Ensure no sensitive information (like .env values) is pushed.
+Test your code before submitting a PR.
+Respect the existing design patterns.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+You are free to:
+
+- ✅ Use it for **learning purposes**.  
+- ✅ Modify and adapt it for your own projects.  
+- ✅ Share it with attribution to the original author.
+
+---
+
+**Disclaimer:**  
+This project is intended **for educational purposes only**. While you are free to use and modify the code, the author assumes **no liability** for any issues arising from its use in production environments.
+
+---
+
+## 📬 Contact
+
+Feel free to reach out if you have questions, suggestions, or just want to connect!  
+
+- **GitHub:** [LuckyBaliyan](https://github.com/LuckyBaliyan)  
+- **LinkedIn:** [Lucky Baliyan](https://www.linkedin.com/in/lucky-baliyan-67b487299/)  
+- **Email:** [baliyanlucky85@gmail.com](mailto:baliyanlucky85@gmail.com)  
+
+
 
